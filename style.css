@@ -1,0 +1,138 @@
+/* Lock background scroll when open */
+body.open { overflow: hidden; background: linear-gradient(135deg, #ff9aa2, #ffd1dc)}
+
+/* Envelope wrapper */
+.envelope-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  flex-direction: column;
+}
+
+/* Envelope container */
+.envelope-container {
+  position: relative;
+  width: 300px;
+  height: 200px;
+  cursor: pointer;
+  touch-action: manipulation;
+  margin-bottom: 20px;
+}
+
+/* Envelope body */
+.envelope {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #d4af7a;
+  border-radius: 8px;
+  z-index: 2;
+  overflow: hidden;
+}
+
+/* Label */
+.label {
+  position: absolute;
+  bottom: 36px;
+  left: 24px;
+  background: #f9f5ec;
+  padding: 6px 12px;
+  font-size: 14px;
+  border-radius: 4px;
+  color: #333;
+  z-index: 3;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.15);
+}
+
+/* Envelope flap */
+.flap {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: #c49a6c;
+  clip-path: polygon(0 0, 100% 0, 50% 55%);
+  transform-origin: top;
+  transition: transform 0.6s ease;
+  z-index: 4;
+}
+
+/* Heart Seal */
+.heart-seal {
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1);
+  font-size: 30px;
+  z-index: 5;
+  transition: transform 0.8s ease, top 1.2s ease, opacity 1s ease;
+}
+
+/* Heart flying animation */
+.heart-seal.fly {
+  transform: translate(-50%, -200%) scale(2);
+  top: -50px;
+  opacity: 0;
+}
+
+/* Message panel */
+.message-panel {
+    width: 360px;
+    max-height: 400px;
+    overflow-y: auto;
+    background: #fff;
+    padding: 20px;
+    border-radius: 16px;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+}
+
+/* Your letter CSS from before */
+.choices button {
+  margin: 10px;
+  padding: 12px 18px;
+  border-radius: 20px;
+  border: none;
+  background: #ff5f9e;
+  color: white;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.popup {
+  background: #ffedf4;
+  padding: 10px;
+  border-radius: 12px;
+  margin-top: 10px;
+  color: #ff5f9e;
+}
+
+.hidden { display: none; }
+
+.letter-text { font-size: 14px; line-height: 1.6; }
+
+.letter-page { display: block; }
+.letter-page.hidden { display: none; }
+
+.nextBtn {
+  margin-top: 15px;
+  padding: 10px 20px;
+  border-radius: 20px;
+  border: none;
+  background: #ff5f9e;
+  color: white;
+  cursor: pointer;
+}
+
+#noBtn { position: relative; }
+
+/* Confetti canvas */
+#confettiCanvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 9999;
+}

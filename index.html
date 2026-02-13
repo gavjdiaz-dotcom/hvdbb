@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <title>hvd</title>
+    <link rel="stylesheet" href="./style.css">
+
+  </head>
+    
+  <body>
+  <div class="envelope-wrapper">
+  <div class="envelope-container" id="envelopeContainer">
+
+    <!-- Envelope Body -->
+    <div class="envelope"></div>
+
+    <!-- Label on front -->
+    <div class="label">To: Althea Vheron</div>
+
+    <!-- Flap -->
+    <div class="flap" id="flap"></div>
+
+    <!-- Heart Seal -->
+    <div class="heart-seal" id="heartSeal">💖</div>
+
+  </div>
+
+  <!-- Confetti Canvas -->
+  <canvas id="confettiCanvas"></canvas>
+
+  <!-- Message Panel -->
+  <div class="message-panel hidden" id="messagePanel">
+
+    <!-- Question -->
+    <div id="questionPage">
+      <h2 id="title">1</h2>
+      <p id="question">choose wisely</p>
+      <div class="choices" id="questionChoices">
+        <button onclick="answer(false)">jungkook</button>
+        <button onclick="answer(true)">gav 😼</button>
+        <p>HAHAHAHAHAHAHAHAHAHAHAHA</p>
+      </div>
+      <div id="popup" class="popup hidden"></div>
+    </div>
+
+    <!-- 3 Pages of Love Letter -->
+    <div id="letterPages" class="hidden">
+
+      <!-- Page 1 -->
+      <h3>happy valentine's, love!</h3>
+      <div class="letter-page" id="page1">
+        <p class="letter-text">
+          first, thank you for making my years chaotic. i love it. it's crazy. a whole year went by, yet all the memories i fondly remember are those made starting from the day i was so nervous to talk to you.
+          <br><br>
+          since then, i’ve been doing the most ridiculous stuff imaginable ever since dating you, perhaps this is what it means to love someone to the point of stupidity. regardless, i’ve had so much fun. every silly moment, every laugh, every unexpected adventure with you has made my world brighter.
+          <br><br>
+          you often mention how i’m not turned off yet, or how sure i am, and that i should run away while i still can. to that, my response is this: i’m intrigued by you. truly, i want to know everything about you, your details down to your intricacies. ever since that day, everything about you seemed to take on color. the more i learn, the more i’m amazed by the depth of your heart, your quirks, and the way you make life feel exciting just by being you.
+        </p>
+        <button class="nextBtn" onclick="nextPage(2)">Next ➡️</button>
+      </div>
+
+      <!-- Page 2 -->
+      <div class="letter-page hidden" id="page2">
+        <p class="letter-text">
+          i also have to admit something. this is actually my first time coding anything like this. i was so unlucky that i just missed the flower shop cutoff, dang it. so i made this instead. i hope it makes up for the flowers, because it comes with all my effort, my love, and a whole lot of heart.
+          <br><br>
+          moreover, from the moment you came into my life, everything changed in the softest, most beautiful way. you became my comfort on hard days, my laughter on ordinary ones, and the reason my heart feels so full.
+          <br><br>
+          furthermore, loving you is effortless. even on days we don’t understand each other perfectly, my heart still chooses you, always. i love the way you exist, the way you care, and the way you make the world feel warmer just by being in it.
+        </p>
+        <button class="nextBtn" onclick="nextPage(3)">next ➡️</button>
+      </div>
+
+      <!-- Page 3 -->
+      <div class="letter-page hidden" id="page3">
+        <p class="letter-text">
+          i also want to thank you for showing me patience, for pushing me to be better, and for reminding me that love is both simple and extraordinary when shared with the right person. with you, every small gesture, every jokes, every shared memories carries meaning that i never imagined i could feel.
+          <br><br>
+          finally, if i had a thousand lifetimes, i would find you in every one of them. you are my favorite person, my safe place, and my baby. as we move forward together, i promise to keep discovering the little details about you that make you, you, to keep laughing with you in the ordinary moments, and to always choose you again and again, no matter what.
+        </p>
+        <h3>will you be my valentine next year and every year after that?</h3>
+        <div class="choices">
+          <button onclick="yes()">YES</button>
+          <button id="noBtn">NO</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- AUDIO -->
+<audio id="bgMusic" loop>
+  <source src="https://cdn.pixabay.com/audio/2022/03/15/audio_6b8b8b4b7c.mp3" type="audio/mpeg">
+</audio>
+
+<audio id="popSound">
+  <source src="https://cdn.pixabay.com/audio/2021/08/04/audio_9e5b2c2d86.mp3" type="audio/mpeg">
+</audio>
+    <script  src="./script.js"></script>
+
+  </body>
+  
+</html>
